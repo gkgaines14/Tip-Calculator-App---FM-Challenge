@@ -24,11 +24,6 @@ input::-webkit-inner-spin-button {
     opacity: .3;
 }
 
-.custom::placeholder{
-    color: var(--very-dark-cyan);
-    opacity: .8;
-}
-
 input{
     background-color: var(--very-light-grayish-cyan);
     width: 350px;
@@ -79,23 +74,21 @@ main{
     border-radius: 20px;
     height: 475px;
     width: 880px;
-    margin: 60px 0 100px;
-    background-image: url("") ;
-    
+    margin: 60px 0px 100px;
 }
 
 .content{
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    height: 475px;
-    /* padding: 0px 20px; */
-    
+    height: 475px;    
 }
 
+/* ----------------------------------------------
+Left side / Input Styles
+---------------------------------------------- */
 
 .data-in{
-    /* background-color: blue; */
     color:var(--dark-grayish-cyan);
     width: 370px;
     height: 400px;
@@ -103,7 +96,6 @@ main{
     flex-direction: column;
     align-items: center;
     padding: 5px;
-    /* margin: 0 40px; */
 }
 
 .bill{
@@ -127,9 +119,6 @@ main{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    /* align-items: center; */
-    /* width: 400px; */
-    
 }
 
 .button{
@@ -159,6 +148,11 @@ main{
     margin: 5px;
 }
 
+.custom::placeholder{
+    color: var(--very-dark-cyan);
+    opacity: .8;
+}
+
 .people-labels{
     display: flex;
     justify-content: space-between;
@@ -181,7 +175,8 @@ main{
 
 
 /* ----------------------------------------------
-Right side / Output Styles----------------------- */
+Right side / Output Styles
+---------------------------------------------- */
 
 .output{
     background-color: var(--very-dark-cyan);
@@ -213,8 +208,6 @@ Right side / Output Styles----------------------- */
     margin: 20px 0px;
 }
 
-
-
 .top h1{
     color: var(--strong-cyan);
     font-size: 38pt;
@@ -233,7 +226,6 @@ Right side / Output Styles----------------------- */
 }
 
 .bottom{
-    /* background-color: blue; */
     margin-bottom: 30px;
 }
 
@@ -264,7 +256,6 @@ Right side / Output Styles----------------------- */
 }
 
 .reset-button:hover{
-    /* background-color: var(--strong-cyan); */
     cursor: pointer;
     opacity:1;
 }
@@ -287,5 +278,5 @@ input:focus {
 
 /* Attribution */
 
-.attribution { font-size: 11px; text-align: center; }
+.attribution { font-size: 11px; text-align: center; margin:125px;}
 .attribution a { color: hsl(228, 45%, 44%); }
