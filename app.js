@@ -1,6 +1,6 @@
 
 let activeButton, activePercent
-let tipPerPerson,totalPerPerson =0
+let tipPerPerson,totalPerPerson=0
 
 let p5Button = document.getElementById('p5')
 let p10Button = document.getElementById('p10')
@@ -42,7 +42,6 @@ function buttonState(button){
         p50Button.style.backgroundColor ='var(--very-dark-cyan)'
         p50Button.style.color='var(--white)'
     }else{
-        //Reset buttons
         p5Button.style.backgroundColor ='var(--very-dark-cyan)'
         p5Button.style.color='var(--white)'
         p10Button.style.backgroundColor ='var(--very-dark-cyan)'
@@ -86,26 +85,28 @@ function reset(){
 
 
     resetButton.disabled = true
+    resetButton.className = "reset-button"
     resetButton.style.opacity = .2
 }
 
 
-
+//Compute and output data
 function compute(button,percent){
-    let bill = document.getElementById('bill-field').value
-    let people = document.getElementById('people-field').value
+    let bill = billField.value
+    let people = peopleField.value
     activeButton = button
     activePercent = percent
     
-    //reset button disabled and styles reset
+    //reset button is enabled and styles reset
     resetButton.disabled = false
+    resetButton.className = 'reset-button button-on'
     resetButton.style.opacity = 1
 
     buttonState(button)
 
 
     if(people==0){
-        console.log('error')
+        //Trigger error messaging
         warning.style.visibility='visible'
         peopleField.style.border='2px solid rgb(251, 124, 27)'
 
@@ -114,9 +115,11 @@ function compute(button,percent){
         tipPerPerson =(bill*activePercent)/people;
         totalPerPerson =tipPerPerson+(bill/people);
 
+        //Hide error messaging
         warning.style.visibility='hidden'
         peopleField.style.border='none'
 
+        //Display Output
         document.getElementById('tip-p-person').innerHTML='$'+ tipPerPerson.toFixed(2)
         document.getElementById('total-p-person').innerHTML='$'+ totalPerPerson.toFixed(2)
     }

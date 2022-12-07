@@ -61,7 +61,6 @@ main{
     display: flex;
     align-items: center;
     justify-content: center;
-    height:100vh;
 }
 
 .container{
@@ -69,7 +68,9 @@ main{
     flex-direction: column;
     align-items: center;
 }
-
+.logo{
+    margin-top: 100px;
+}
 .card{
     background-color:var(--white);
     border-radius: 20px;
@@ -119,7 +120,7 @@ Left side / Input Styles
 .t-buttons{
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content:space-between;
 }
 
 .button{
@@ -201,11 +202,12 @@ Right side / Output Styles
     width: 100%;
     margin: 20px 0px;
 }
+
 .total-section{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 300px;
+    width: 340px;
     margin: 20px 0px;
 }
 
@@ -237,7 +239,7 @@ Right side / Output Styles
     border-radius: 5px;
     border: none;
     height: 50px;
-    width:300px;
+    width: 340px;
     text-align: center;
     font-size: 14pt;
     opacity: 1;
@@ -250,7 +252,7 @@ Right side / Output Styles
     border-radius: 5px;
     border: none;
     height: 50px;
-    width:300px;
+    width:340px;
     text-align: center;
     font-size: 14pt;
     opacity: .2;
@@ -270,7 +272,7 @@ Right side / Output Styles
     border: solid var(--strong-cyan) 2px;
 }
 
-.reset-button:hover{
+.button-on:hover{
     background-color: var(--bright-cyan);
     cursor: pointer;
     opacity:1;
@@ -297,8 +299,91 @@ input:focus {
 }
 
 
-
 /* Attribution */
 
 .attribution { font-size: 11px; text-align: center; margin:125px;}
 .attribution a { color: hsl(228, 45%, 44%); }
+
+
+
+
+/* Media size controllers */
+
+@media screen and (max-width:430px) {
+
+    body{
+        overflow:auto;
+    }
+
+    input{
+        width: 290px;
+    }
+
+    .logo{
+        margin-top: 30px;
+    }
+
+    .card{
+        height: 835px;
+        width: 375px;
+    }
+
+    .content{
+        flex-direction: column;
+        height: 800px;    
+    }
+
+    .data-in{
+        width: 300px;
+        margin-top: 30px;
+    }
+
+    .button{
+        width:122px;
+        margin: 7px 3px;
+    }
+
+    #custom{
+        width:130px;
+        margin-top: 7px;
+        margin-right: 2px;
+    }
+
+    .t-buttons{
+        width:310px
+    }
+
+    .output{
+        margin: 70px 0px 0px 4px;
+        width: 330px;
+    }
+
+    .total-section{
+        width: 290px;
+    }
+
+    .top{
+        margin-top: 10px;
+    }
+
+    .top h1{
+        font-size: 30pt;
+    }
+
+    .output{
+        height: 300px;
+    }
+
+    .reset-button{
+        width: 290px;
+        height: 55px;
+    }
+
+    .reset-button:disabled{
+        width: 290px;
+        height: 55px;
+    }
+
+
+
+}
