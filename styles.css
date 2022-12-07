@@ -1,5 +1,6 @@
 :root{
     --strong-cyan: hsl(172, 67%, 45%);
+    --bright-cyan: hsl(172, 78%, 75%);
     --very-dark-cyan: hsl(183, 100%, 15%);
     --dark-grayish-cyan: hsl(186, 14%, 43%);
     --grayish-cyan: hsl(184, 14%, 56%);
@@ -134,7 +135,7 @@ Left side / Input Styles
     margin: 7px 6px;
 }
 
-.custom{
+#custom{
     background-color: var(--very-light-grayish-cyan);
     color:var(--very-dark-cyan);
     font-size: 1.4rem;
@@ -148,7 +149,7 @@ Left side / Input Styles
     margin: 5px;
 }
 
-.custom::placeholder{
+#custom::placeholder{
     color: var(--very-dark-cyan);
     opacity: .8;
 }
@@ -168,7 +169,7 @@ Left side / Input Styles
     margin:15px 0px 5px;
 }
 
-.warning{
+#warning{
     color: rgb(251, 124, 27);
     visibility: hidden;
 }
@@ -234,31 +235,52 @@ Right side / Output Styles
     color: var(--very-dark-cyan);
     padding: 8px;
     border-radius: 5px;
-    height: 32px;
+    border: none;
+    height: 50px;
     width:300px;
     text-align: center;
     font-size: 14pt;
-    opacity: .15;
+    opacity: 1;
+}
+
+.reset-button:disabled{
+    background-color:var(--strong-cyan);
+    color: var(--very-dark-cyan);
+    padding: 8px;
+    border-radius: 5px;
+    border: none;
+    height: 50px;
+    width:300px;
+    text-align: center;
+    font-size: 14pt;
+    opacity: .2;
 }
 
 
 /* Active states */
 
 .button:hover{
-    background-color: var(--strong-cyan);
+    background-color: var(--bright-cyan);
     color: var(--very-dark-cyan);
     cursor: pointer;
 }
 
-.custom:hover{
+#custom:hover{
     background-color: white;
     border: solid var(--strong-cyan) 2px;
 }
 
 .reset-button:hover{
+    background-color: var(--bright-cyan);
     cursor: pointer;
     opacity:1;
 }
+
+.reset-button:disabled:hover{
+    cursor: auto;
+    opacity:.2;
+}
+
 
 input:hover{
     border: solid var(--strong-cyan) 2px;
@@ -270,7 +292,7 @@ input:focus {
     border:2px solid var(--strong-cyan);
 }
 
-.custom:focus{
+#custom:focus{
     border: solid var(--strong-cyan) 2px;
 }
 
